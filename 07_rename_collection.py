@@ -5,7 +5,7 @@ from specklepy.objects import Base
 from specklepy.core.api.inputs.version_inputs import CreateVersionInput
 
 PROJECT_ID = "128262a20c"
-MODEL_ID = "a7296f66a3"
+MODEL_ID = "0763ad7d28"
 TARGET_APPID = "7173a954-412b-4606-b14c-c2bdb579af98"  # node currently named 'Collection'
 
 
