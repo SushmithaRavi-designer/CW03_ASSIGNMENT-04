@@ -5,7 +5,7 @@ from specklepy.objects import Base
 from specklepy.core.api.inputs.version_inputs import CreateVersionInput
 
 PROJECT_ID = "128262a20c"
-MODEL_ID = "9da8725bf2"
+MODEL_ID = "0763ad7d28"
 NEW_ROOT_NAME = "python script"
 
 client = get_client()
