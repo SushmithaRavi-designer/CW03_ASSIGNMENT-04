@@ -166,6 +166,11 @@ def main():
 
     print(f"✓ Added Module and Designer properties to {len(elements)} elements")
 
+    # Add custom properties at the root level (do not alter other data)
+    data["custom_property"] = "Hello from specklepy!"
+    data["analysis_date"] = "2026-01-29"
+    data["processed_by"] = "Team_02.3"
+
     # Send the modified data back to Speckle
     object_id = operations.send(data, [transport])
     print(f"✓ Sent object: {object_id}")
