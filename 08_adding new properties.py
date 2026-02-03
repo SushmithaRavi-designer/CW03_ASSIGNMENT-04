@@ -48,7 +48,7 @@ def find_all_elements(obj, elements=None):
     
     # Add if it's not a Collection but has geometric properties
     speckle_type = getattr(obj, "speckle_type", "")
-    if has_geometry and "Collection" not in speckle_type:
+    if has_geometry and "rCollection" not in speckle_type:
         elements.append(obj)
     
     # Search in child elements
@@ -169,7 +169,7 @@ def main():
     # Add custom properties at the root level (do not alter other data)
     data["custom_property"] = "Hello from specklepy!"
     data["analysis_date"] = "2026-01-29"
-    data["processed_by"] = "Team_02.3"
+    data["Tower"] = "Team_02.3"
 
     # Send the modified data back to Speckle
     object_id = operations.send(data, [transport])
