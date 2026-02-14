@@ -8,6 +8,7 @@ Usage:
 """
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from specklepy.api.client import SpeckleClient
 
@@ -19,8 +20,10 @@ def get_client() -> SpeckleClient:
     Requires SPECKLE_TOKEN in environment or .env file.
     Optionally set SPECKLE_SERVER (defaults to app.speckle.systems).
     """
-    # Load environment variables from a local .env file, if present
-    load_dotenv()
+    # Load environment variables from .env file in script directory
+    script_dir = Path(__file__).parent
+    env_file = script_dir / ".env"
+    load_dotenv(env_file, override=True)
 
     # Get token and server host from environment
     token = os.environ.get("SPECKLE_TOKEN")
